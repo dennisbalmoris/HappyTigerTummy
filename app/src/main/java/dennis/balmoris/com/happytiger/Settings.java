@@ -1,24 +1,23 @@
 package dennis.balmoris.com.happytiger;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-
+public class Settings extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle adbt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.settings);
         dl = (DrawerLayout)findViewById(R.id.dl);
         adbt = new ActionBarDrawerToggle(this, dl, R.string.Open,R.string.Close);
         adbt.setDrawerIndicatorEnabled(true);
@@ -37,26 +36,26 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if(id == R.id.homePage)
-                    {
-                        Toast.makeText(MainActivity.this, "You are in this page", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(id == R.id.foodStores)
-                        {
-                            startActivity(new Intent(MainActivity.this, FoodStores.class));
-                             Toast.makeText(MainActivity.this, "Food Stores", Toast.LENGTH_SHORT).show();
-                         }
-                       else  if(id == R.id.favorites)
-                           {
-                                  startActivity(new Intent(MainActivity.this, Favorites.class));
-                                  Toast.makeText(MainActivity.this, "Favorites", Toast.LENGTH_SHORT).show();
-                             }
 
-                             else  if(id == R.id.settings)
+                {
+                    startActivity(new Intent(Settings.this, MainActivity.class));
+                    Toast.makeText(Settings.this, "Home Page", Toast.LENGTH_SHORT).show();
+                }
+                else if(id == R.id.foodStores)
+                {
+                    startActivity(new Intent(Settings.this, FoodStores.class));
+                    Toast.makeText(Settings.this, "Food Stores", Toast.LENGTH_SHORT).show();
+                }
+                else  if(id == R.id.favorites)
+                {
+                    startActivity(new Intent(Settings.this, Favorites.class));
+                    Toast.makeText(Settings.this, "Favorites", Toast.LENGTH_SHORT).show();
+                }
 
-                                {
-                                    startActivity(new Intent(MainActivity.this, Settings.class));
-                                    Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
-                                }
+                else  if(id == R.id.settings)
+                {
+                    Toast.makeText(Settings.this, "You are in this page", Toast.LENGTH_SHORT).show();
+                }
 
                 return true;
             }
@@ -68,3 +67,5 @@ public class MainActivity extends AppCompatActivity {
         return adbt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 }
+
+

@@ -28,7 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".FoodStores"></activity>
+        <activity android:name=".Favorites"></activity>
+        <activity android:name=".Settings"></activity>
     </application>
 
 </manifest>
