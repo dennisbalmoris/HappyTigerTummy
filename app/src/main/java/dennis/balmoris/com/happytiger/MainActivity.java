@@ -1,5 +1,6 @@
 package dennis.balmoris.com.happytiger;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if(id == R.id.foodStores)
                         {
+                            startActivity(new Intent(MainActivity.this, Main2Activity.class));
                              Toast.makeText(MainActivity.this, "Food Stores", Toast.LENGTH_SHORT).show();
                          }
                        else  if(id == R.id.favorites)
