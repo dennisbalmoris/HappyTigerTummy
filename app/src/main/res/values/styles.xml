@@ -3,9 +3,19 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <color name="primaryColor">#ffd600</color>
+    <color name="primaryLightColor">#ffff52</color>
+    <color name="primaryDarkColor">#c7a500</color>
+    <color name="primaryTextColor">#000000</color>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background</item>
     </style>
 
 </resources>

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">HappyTiger</string>
+    <string name="app_name">Happy Tiger Tummy</string>
+    <string name="Open">Happy Tiger Tummy</string>
+    <string name="Close">Happy Tiger Tummy</string>
 </resources>
