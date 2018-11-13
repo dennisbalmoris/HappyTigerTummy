@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class FoodStores extends AppCompatActivity {
@@ -62,6 +63,15 @@ public class FoodStores extends AppCompatActivity {
             }
         });
     }
+
+    public void onClickPizza(View v){
+        startActivity(new Intent(FoodStores.this, PizzaList.class));
+    }
+
+    public void onClickChicken(View v){
+        startActivity(new Intent(FoodStores.this, ChickenList.class));
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

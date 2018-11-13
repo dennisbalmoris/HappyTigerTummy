@@ -3,6 +3,7 @@ package dennis.balmoris.com.happytiger;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle adbt;
+    ViewPager viewPager;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
         adbt.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
+
+        viewPager.setAdapter(viewPagerAdapter);
 
         NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view);
 
@@ -62,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

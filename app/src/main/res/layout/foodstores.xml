@@ -24,13 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="0dp">
 
-                <TextView
-                    android:id="@+id/textGrid"
-                    android:text="FOOD ESTABLISHMENTS"
-                    android:textSize="26sp"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/textGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="FOOD ESTABLISHMENTS"
+                android:textSize="26sp"
+                android:visibility="visible" />
 
         </RelativeLayout>
 
@@ -74,7 +75,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pizza"
+                        android:text="Carinderia"
                         android:textSize="18sp"
                         android:textStyle="bold"
 
@@ -115,7 +116,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pizza"
+                        android:text="Shakes"
                         android:textSize="18sp"
                         android:textStyle="bold"
 
@@ -134,6 +135,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
+                android:onClick="onClickChicken"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:layout_column="1"
@@ -142,21 +144,20 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="16dp"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    >
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_local_pizza_black_24dp" />
+                        android:src="@drawable/ic_delete_sweep_black_24dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pizza"
+                        android:text="Coffee Shop"
                         android:textSize="18sp"
                         android:textStyle="bold"
 
@@ -197,7 +198,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pizza"
+                        android:text="Street Foods"
                         android:textSize="18sp"
                         android:textStyle="bold"
 
@@ -238,7 +239,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pizza"
+                        android:text="Restaurant"
                         android:textSize="18sp"
                         android:textStyle="bold"
 
@@ -257,6 +258,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
+                android:onClick="onClickPizza"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:layout_column="0"
@@ -278,7 +280,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pizza"
+                        android:text="Fast Food"
                         android:textSize="18sp"
                         android:textStyle="bold"
 
@@ -295,13 +297,17 @@
 
 
     </LinearLayout>
+
+
+
+
+
+
     <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/nav_view"
         android:layout_gravity="start"
         app:headerLayout="@layout/navigation_header"
-        app:menu="@menu/navigation_menu"
-        >
-    </android.support.design.widget.NavigationView>
+        app:menu="@menu/navigation_menu"></android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

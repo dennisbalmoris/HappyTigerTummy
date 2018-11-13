@@ -31,6 +31,8 @@
         <activity android:name=".FoodStores"></activity>
         <activity android:name=".Favorites"></activity>
         <activity android:name=".Settings"></activity>
+        <activity android:name=".PizzaList"></activity>
+        <activity android:name=".ChickenList"></activity>
     </application>
 
 </manifest>
