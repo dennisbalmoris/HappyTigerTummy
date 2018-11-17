@@ -15,14 +15,14 @@ public class PizzaList extends AppCompatActivity {
 
     ListView mListView;
 
-    int[] images = {R.drawable.p1,
-                    R.drawable.p2,
-                    R.drawable.p3,
+    int[] images = {R.drawable.sb,
+                    R.drawable.bo,
+                    R.drawable.seattle,
                     };
 
-    String[] Names = {"Ketchup",
-                      "Mustard",
-                      "Mayonnaise"
+    String[] Names = {"Starbucks Coffee",
+                      "Bo's Coffee",
+                      "Seattle's Best Coffee"
                         };
 
     @Override

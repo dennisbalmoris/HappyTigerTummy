@@ -33,6 +33,10 @@
         <activity android:name=".Settings"></activity>
         <activity android:name=".PizzaList"></activity>
         <activity android:name=".ChickenList"></activity>
+        <activity android:name=".CarinderiaList"></activity>
+        <activity android:name=".ShakesList"></activity>
+        <activity android:name=".RestaurantsList"></activity>
+        <activity android:name=".StreetfoodList"></activity>
     </application>
 
 </manifest>

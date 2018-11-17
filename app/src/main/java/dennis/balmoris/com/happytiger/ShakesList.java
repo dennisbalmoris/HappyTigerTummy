@@ -11,26 +11,26 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ChickenList extends AppCompatActivity {
+public class ShakesList extends AppCompatActivity {
 
     ListView mListView;
 
-    int[] images = {R.drawable.kfc,
-            R.drawable.mcdo,
-            R.drawable.jollibee,
+    int[] images = {R.drawable.zagu,
+            R.drawable.starr,
+            R.drawable.amo,
     };
 
-    String[] Names = {"KFC",
-            "Mcdo",
-            "Jolibee"
+    String[] Names = {"Zagu",
+            "Starr's Famous Shakes",
+            "Amo Yamie Crib"
     };
 
     @Override
     public void onCreate(Bundle savedInstanceStatete) {
         super.onCreate(savedInstanceStatete);
-        setContentView(R.layout.chicken_list);
+        setContentView(R.layout.shakes_list);
 
-        mListView = findViewById(R.id.chickenListView);
+        mListView = findViewById(R.id.shakesListView);
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
@@ -56,9 +56,9 @@ public class ChickenList extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            View view = getLayoutInflater().inflate(R.layout.chicken_custom, null);
-            ImageView mImageView = view.findViewById(R.id.chickenImageView);
-            TextView mTextView = (TextView) view.findViewById(R.id.chickenTextView);
+            View view = getLayoutInflater().inflate(R.layout.shakes_custom, null);
+            ImageView mImageView = view.findViewById(R.id.shakesImageView);
+            TextView mTextView = (TextView) view.findViewById(R.id.shakesTextView);
             mImageView.setImageResource(images[position]);
             mTextView.setText(Names[position]);
 

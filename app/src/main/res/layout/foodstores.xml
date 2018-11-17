@@ -53,6 +53,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
+                android:onClick="onClickCarinderia"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:layout_column="1"
@@ -70,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_local_pizza_black_24dp" />
+                        android:src="@drawable/pot" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -94,6 +95,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
+                android:onClick="onClickShakes"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:layout_column="1"
@@ -111,7 +113,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_local_pizza_black_24dp" />
+                        android:src="@drawable/shake" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -152,12 +154,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_delete_sweep_black_24dp" />
+                        android:src="@drawable/chicken" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Coffee Shop"
+                        android:text="Fast Food"
                         android:textSize="18sp"
                         android:textStyle="bold"
 
@@ -176,6 +178,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
+                android:onClick="onClickStreetfood"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:layout_column="0"
@@ -193,7 +196,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_local_pizza_black_24dp" />
+                        android:src="@drawable/bbq" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -217,6 +220,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
+                android:onClick="onClickRestaurants"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:layout_column="0"
@@ -234,7 +238,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_local_pizza_black_24dp" />
+                        android:src="@drawable/wine" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -275,14 +279,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_local_pizza_black_24dp" />
+                        android:src="@drawable/coffee" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fast Food"
+                        android:text="Coffee Shop"
                         android:textSize="18sp"
                         android:textStyle="bold"
+
 
                         />
 
@@ -297,10 +302,6 @@
 
 
     </LinearLayout>
-
-
-
-
 
 
     <android.support.design.widget.NavigationView

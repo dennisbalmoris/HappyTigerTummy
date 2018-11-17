@@ -72,6 +72,21 @@ public class FoodStores extends AppCompatActivity {
         startActivity(new Intent(FoodStores.this, ChickenList.class));
     }
 
+    public void onClickCarinderia(View v){
+        startActivity(new Intent(FoodStores.this, CarinderiaList.class));
+    }
+
+    public void onClickShakes(View v){
+        startActivity(new Intent(FoodStores.this, ShakesList.class));
+    }
+
+    public void onClickRestaurants(View v){
+        startActivity(new Intent(FoodStores.this, RestaurantsList.class));
+    }
+
+    public void onClickStreetfood(View v){
+        startActivity(new Intent(FoodStores.this, StreetfoodList.class));
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

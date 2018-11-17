@@ -11,26 +11,26 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ChickenList extends AppCompatActivity {
+public class StreetfoodList extends AppCompatActivity {
 
     ListView mListView;
 
-    int[] images = {R.drawable.kfc,
-            R.drawable.mcdo,
-            R.drawable.jollibee,
+    int[] images = {R.drawable.street1,
+            R.drawable.street2,
+            R.drawable.street3,
     };
 
-    String[] Names = {"KFC",
-            "Mcdo",
-            "Jolibee"
+    String[] Names = {"Espana Gate 1",
+            "Asturias",
+            "P. Campa"
     };
 
     @Override
     public void onCreate(Bundle savedInstanceStatete) {
         super.onCreate(savedInstanceStatete);
-        setContentView(R.layout.chicken_list);
+        setContentView(R.layout.streetfood_list);
 
-        mListView = findViewById(R.id.chickenListView);
+        mListView = findViewById(R.id.streetfoodListView);
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
@@ -56,9 +56,9 @@ public class ChickenList extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            View view = getLayoutInflater().inflate(R.layout.chicken_custom, null);
-            ImageView mImageView = view.findViewById(R.id.chickenImageView);
-            TextView mTextView = (TextView) view.findViewById(R.id.chickenTextView);
+            View view = getLayoutInflater().inflate(R.layout.streetfood_custom, null);
+            ImageView mImageView = view.findViewById(R.id.streetfoodImageView);
+            TextView mTextView = (TextView) view.findViewById(R.id.streetfoodTextView);
             mImageView.setImageResource(images[position]);
             mTextView.setText(Names[position]);
 

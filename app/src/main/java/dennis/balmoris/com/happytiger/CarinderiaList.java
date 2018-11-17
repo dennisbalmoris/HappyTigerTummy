@@ -11,26 +11,26 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ChickenList extends AppCompatActivity {
+public class CarinderiaList extends AppCompatActivity {
 
     ListView mListView;
 
-    int[] images = {R.drawable.kfc,
-            R.drawable.mcdo,
-            R.drawable.jollibee,
+    int[] images = {R.drawable.barcolli,
+            R.drawable.ilars,
+            R.drawable.liempo,
     };
 
-    String[] Names = {"KFC",
-            "Mcdo",
-            "Jolibee"
+    String[] Names = {"Barcolli",
+            "Ilars",
+            "Liempuhan"
     };
 
     @Override
     public void onCreate(Bundle savedInstanceStatete) {
         super.onCreate(savedInstanceStatete);
-        setContentView(R.layout.chicken_list);
+        setContentView(R.layout.carinderia_list);
 
-        mListView = findViewById(R.id.chickenListView);
+        mListView = findViewById(R.id.carinderiaListView);
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
@@ -56,9 +56,9 @@ public class ChickenList extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            View view = getLayoutInflater().inflate(R.layout.chicken_custom, null);
-            ImageView mImageView = view.findViewById(R.id.chickenImageView);
-            TextView mTextView = (TextView) view.findViewById(R.id.chickenTextView);
+            View view = getLayoutInflater().inflate(R.layout.carinderia_custom, null);
+            ImageView mImageView = view.findViewById(R.id.carinderiaImageView);
+            TextView mTextView = (TextView) view.findViewById(R.id.carinderiaTextView);
             mImageView.setImageResource(images[position]);
             mTextView.setText(Names[position]);
 
