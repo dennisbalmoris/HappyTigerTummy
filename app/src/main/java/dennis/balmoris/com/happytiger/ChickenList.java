@@ -18,11 +18,15 @@ public class ChickenList extends AppCompatActivity {
     int[] images = {R.drawable.kfc,
             R.drawable.mcdo,
             R.drawable.jollibee,
+            R.drawable.inasa,
+            R.drawable.alejandro
     };
 
     String[] Names = {"KFC",
             "Mcdo",
-            "Jolibee"
+            "Jolibee",
+            "Mang Inasal",
+            "Alejandro's"
     };
 
     @Override

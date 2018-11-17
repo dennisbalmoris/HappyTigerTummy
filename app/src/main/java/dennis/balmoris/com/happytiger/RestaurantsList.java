@@ -18,11 +18,15 @@ public class RestaurantsList extends AppCompatActivity {
     int[] images = {R.drawable.shakeys,
             R.drawable.pancake,
             R.drawable.army,
+            R.drawable.sbarro,
+            R.drawable.ichiro
     };
 
     String[] Names = {"Shakeys",
             "Pancake House",
-            "Army Navy"
+            "Army Navy",
+            "Sbarro",
+            "Ichiro Ramen"
     };
 
     @Override

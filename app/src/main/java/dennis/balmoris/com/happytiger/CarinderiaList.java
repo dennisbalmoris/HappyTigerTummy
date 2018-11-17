@@ -18,11 +18,15 @@ public class CarinderiaList extends AppCompatActivity {
     int[] images = {R.drawable.barcolli,
             R.drawable.ilars,
             R.drawable.liempo,
+            R.drawable.mang,
+            R.drawable.cantunan
     };
 
     String[] Names = {"Barcolli",
             "Ilars",
-            "Liempuhan"
+            "Liempuhan",
+            "Mang Tootz",
+            "Cantunan"
     };
 
     @Override

@@ -18,11 +18,15 @@ public class StreetfoodList extends AppCompatActivity {
     int[] images = {R.drawable.street1,
             R.drawable.street2,
             R.drawable.street3,
+            R.drawable.hepa,
+            R.drawable.anton,
     };
 
     String[] Names = {"Espana Gate 1",
-            "Asturias",
-            "P. Campa"
+            "Asturias St.",
+            "P. Campa St.",
+            "Hepa Lane",
+            "Antonio St."
     };
 
     @Override

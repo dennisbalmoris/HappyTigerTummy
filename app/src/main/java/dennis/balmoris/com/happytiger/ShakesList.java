@@ -18,11 +18,15 @@ public class ShakesList extends AppCompatActivity {
     int[] images = {R.drawable.zagu,
             R.drawable.starr,
             R.drawable.amo,
+            R.drawable.appetea,
+            R.drawable.dakas
     };
 
     String[] Names = {"Zagu",
             "Starr's Famous Shakes",
-            "Amo Yamie Crib"
+            "Amo Yamie Crib",
+            "Bon AppeTEA",
+            "Dakasi"
     };
 
     @Override

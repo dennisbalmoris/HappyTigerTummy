@@ -18,11 +18,15 @@ public class PizzaList extends AppCompatActivity {
     int[] images = {R.drawable.sb,
                     R.drawable.bo,
                     R.drawable.seattle,
+                    R.drawable.coff,
+                    R.drawable.ichill
                     };
 
     String[] Names = {"Starbucks Coffee",
                       "Bo's Coffee",
-                      "Seattle's Best Coffee"
+                      "Seattle's Best Coffee",
+                      "Cafe Khivan Coffee",
+                      "iChill Theater Cafe"
                         };
 
     @Override
