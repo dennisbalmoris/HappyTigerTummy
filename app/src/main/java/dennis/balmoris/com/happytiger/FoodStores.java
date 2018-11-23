@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class FoodStores extends AppCompatActivity {
 
     private DrawerLayout dl;
@@ -61,8 +63,10 @@ public class FoodStores extends AppCompatActivity {
 
                 else  if(id == R.id.signout)
                 {
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
                     startActivity(new Intent(FoodStores.this, MainActivity.class));
-                    Toast.makeText(FoodStores.this, "You have signed out successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FoodStores.this, "You have signed out successfully", Toast.LENGTH_LONG).show();
                 }
 
 

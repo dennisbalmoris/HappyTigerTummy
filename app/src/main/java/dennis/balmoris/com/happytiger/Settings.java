@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Settings extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle adbt;
@@ -60,8 +62,10 @@ public class Settings extends AppCompatActivity {
 
                 else  if(id == R.id.signout)
                 {
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
                     startActivity(new Intent(Settings.this, MainActivity.class));
-                    Toast.makeText(Settings.this, "You have signed out successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Settings.this, "You have signed out successfully", Toast.LENGTH_LONG).show();
                 }
 
                 return true;

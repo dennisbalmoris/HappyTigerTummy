@@ -16,8 +16,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,6 +39,7 @@ public class ProfileActivity extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle adbt;
 
+    TextView textView;
     ImageView imageView;
     EditText editText;
     ProgressBar progressBar;
@@ -51,18 +54,21 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
-
-
         mAuth = FirebaseAuth.getInstance();
+
         editText = (EditText) findViewById(R.id.editTextDisplayName);
-        imageView = (ImageView) findViewById(R.id.profileImage);
+        imageView = (ImageView) findViewById(R.id.imageView);
         progressBar = findViewById(R.id.progressBar);
+        textView = (TextView) findViewById(R.id.textViewVerified);
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showImageChooser();
             }
         });
+
+        loadUserInformation();
 
         findViewById(R.id.btnProceed).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,8 +120,11 @@ public class ProfileActivity extends AppCompatActivity {
 
                 else  if(id == R.id.signout)
                 {
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
                     startActivity(new Intent(ProfileActivity.this, MainActivity.class));
                     Toast.makeText(ProfileActivity.this, "You have signed out successfully", Toast.LENGTH_SHORT).show();
+
                 }
 
 
@@ -123,6 +132,52 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mAuth.getCurrentUser() == null){
+            finish();
+            startActivity(new Intent(this, MainActivity.class));
+        }
+    }
+
+    private void loadUserInformation() {
+        final FirebaseUser user = mAuth.getCurrentUser();
+
+        /*
+        if(user != null) {
+            if (user.getPhotoUrl().toString() != null) {
+                Glide.with(this).load(user.getPhotoUrl().toString())
+                        .into(imageView);
+
+            }
+
+           */
+            if (user.getDisplayName() != null) {
+               editText.setText(user.getDisplayName());
+
+
+            }if(user.isEmailVerified()) {
+            textView.setText("Email Verified");
+
+             }else{
+                textView.setText("Email Not Verifed (Click to Verify)");
+                textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Toast.makeText(ProfileActivity.this,"Verification Email Sent",Toast.LENGTH_LONG).show();
+                            }
+                        });
+                    }
+                });
+        }
+        }
+
+
 
     private void saveUserInformation() {
         String displayName = editText.getText().toString();
@@ -210,8 +265,6 @@ public class ProfileActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         return adbt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
-
-
 
 
 
