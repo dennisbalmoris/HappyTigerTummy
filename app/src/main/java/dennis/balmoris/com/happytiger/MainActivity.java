@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
+                    finish();
                     Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
@@ -91,9 +92,18 @@ public class MainActivity extends AppCompatActivity {
        userLogin();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
 
+        if(mAuth.getCurrentUser() != null){
+            finish();
+            startActivity(new Intent(this, ProfileActivity.class));
+        }
+    }
 
     public void onClickSignup(View view){
+                finish();
                 startActivity(new Intent(MainActivity.this, SignupActivity.class));
         }
 
