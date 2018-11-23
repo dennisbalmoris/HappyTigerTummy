@@ -3,24 +3,22 @@
     package="dennis.balmoris.com.happytiger">
 
     <application
+        android:name=".SplashTime"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".SplashTime">
-
-
-        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,15 +26,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FoodStores"></activity>
-        <activity android:name=".Favorites"></activity>
-        <activity android:name=".Settings"></activity>
-        <activity android:name=".PizzaList"></activity>
-        <activity android:name=".ChickenList"></activity>
-        <activity android:name=".CarinderiaList"></activity>
-        <activity android:name=".ShakesList"></activity>
-        <activity android:name=".RestaurantsList"></activity>
-        <activity android:name=".StreetfoodList"></activity>
+        <activity android:name=".FoodStores" />
+        <activity android:name=".Favorites" />
+        <activity android:name=".Settings" />
+        <activity android:name=".PizzaList" />
+        <activity android:name=".ChickenList" />
+        <activity android:name=".CarinderiaList" />
+        <activity android:name=".ShakesList" />
+        <activity android:name=".RestaurantsList" />
+        <activity android:name=".StreetfoodList" />
+        <activity android:name=".SignupActivity" />
     </application>
 
 </manifest>

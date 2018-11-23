@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "882741690986",
+    "firebase_url": "https://happytigertummy.firebaseio.com",
+    "project_id": "happytigertummy",
+    "storage_bucket": "happytigertummy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882741690986:android:6be6739999b8764e",
+        "android_client_info": {
+          "package_name": "dennis.balmoris.com.happytiger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882741690986-stpoolg6jijvo76ev7r1sq75ousf6ili.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dennis.balmoris.com.happytiger",
+            "certificate_hash": "f89541643f20f78dfeeac15cd1216f15b6c1704e"
+          }
+        },
+        {
+          "client_id": "882741690986-klapas28kovmhcno7tgbo7pm9aceh2ib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQYOUTLUaXnz3aTw18M-w350ZtNMs2y-s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882741690986-klapas28kovmhcno7tgbo7pm9aceh2ib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

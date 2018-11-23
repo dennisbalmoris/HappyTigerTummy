@@ -3,19 +3,19 @@ package dennis.balmoris.com.happytiger;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle adbt;
-    ViewPager viewPager;
+
 
 
 
@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        //DRAWER LAYOUT
         dl = (DrawerLayout)findViewById(R.id.dl);
         adbt = new ActionBarDrawerToggle(this, dl, R.string.Open,R.string.Close);
         adbt.setDrawerIndicatorEnabled(true);
@@ -34,11 +37,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
-
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
-
-        viewPager.setAdapter(viewPagerAdapter);
 
         NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view);
 
@@ -77,8 +75,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+    public void onClickSignup(View view){
+                startActivity(new Intent(MainActivity.this, SignupActivity.class));
+
+        }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return adbt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
+
+
 }
