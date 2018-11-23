@@ -25,13 +25,6 @@ public class MainActivity extends AppCompatActivity {
     EditText editTextEmail, editTextPassword;
     ProgressBar progressBar;
 
-    private DrawerLayout dl;
-    private ActionBarDrawerToggle adbt;
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,54 +37,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
 
-
-        //DRAWER LAYOUT
-        dl = (DrawerLayout)findViewById(R.id.dl);
-        adbt = new ActionBarDrawerToggle(this, dl, R.string.Open,R.string.Close);
-        adbt.setDrawerIndicatorEnabled(true);
-
-        dl.addDrawerListener(adbt);
-        adbt.syncState();
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
-        NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view);
-
-        nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-
-                if(id == R.id.homePage)
-                    {
-                        Toast.makeText(MainActivity.this, "You are in this page", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(id == R.id.foodStores)
-                        {
-                            startActivity(new Intent(MainActivity.this, FoodStores.class));
-                             Toast.makeText(MainActivity.this, "Food Stores", Toast.LENGTH_SHORT).show();
-                         }
-                       else  if(id == R.id.favorites)
-                           {
-                                  startActivity(new Intent(MainActivity.this, Favorites.class));
-                                  Toast.makeText(MainActivity.this, "Favorites", Toast.LENGTH_SHORT).show();
-                             }
-
-                             else  if(id == R.id.settings)
-
-                                {
-                                    startActivity(new Intent(MainActivity.this, Settings.class));
-                                    Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
-                                }
-
-                return true;
-            }
-        });
     }
-
 
     private void userLogin(){
         String email = editTextEmail.getText().toString().trim();
@@ -131,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(MainActivity.this, FoodStores.class);
+                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }else{
@@ -150,12 +96,6 @@ public class MainActivity extends AppCompatActivity {
     public void onClickSignup(View view){
                 startActivity(new Intent(MainActivity.this, SignupActivity.class));
         }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return adbt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
-    }
 
 
 }

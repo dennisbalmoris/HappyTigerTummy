@@ -36,6 +36,7 @@
         <activity android:name=".RestaurantsList" />
         <activity android:name=".StreetfoodList" />
         <activity android:name=".SignupActivity" />
+        <activity android:name=".ProfileActivity" />
     </application>
 
 </manifest>

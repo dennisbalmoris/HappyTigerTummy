@@ -40,8 +40,8 @@ public class FoodStores extends AppCompatActivity {
                 if(id == R.id.homePage)
 
                 {
-                    startActivity(new Intent(FoodStores.this, MainActivity.class));
-                    Toast.makeText(FoodStores.this, "Home Page", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(FoodStores.this, ProfileActivity.class));
+                    Toast.makeText(FoodStores.this, "My Profile", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.foodStores)
                 {
@@ -58,6 +58,13 @@ public class FoodStores extends AppCompatActivity {
                     startActivity(new Intent(FoodStores.this, Settings.class));
                     Toast.makeText(FoodStores.this, "Settings", Toast.LENGTH_SHORT).show();
                 }
+
+                else  if(id == R.id.signout)
+                {
+                    startActivity(new Intent(FoodStores.this, MainActivity.class));
+                    Toast.makeText(FoodStores.this, "You have signed out successfully", Toast.LENGTH_SHORT).show();
+                }
+
 
                 return true;
             }

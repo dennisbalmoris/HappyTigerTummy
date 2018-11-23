@@ -39,8 +39,8 @@ public class Favorites extends AppCompatActivity {
                 if(id == R.id.homePage)
 
                 {
-                    startActivity(new Intent(Favorites.this, MainActivity.class));
-                    Toast.makeText(Favorites.this, "Home Page", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Favorites.this, ProfileActivity.class));
+                    Toast.makeText(Favorites.this, "My Profile", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.foodStores)
                 {
@@ -57,6 +57,13 @@ public class Favorites extends AppCompatActivity {
                     startActivity(new Intent(Favorites.this, Settings.class));
                     Toast.makeText(Favorites.this, "Settings", Toast.LENGTH_SHORT).show();
                 }
+
+                else  if(id == R.id.signout)
+                {
+                    startActivity(new Intent(Favorites.this, MainActivity.class));
+                    Toast.makeText(Favorites.this, "You have signed out successfully", Toast.LENGTH_SHORT).show();
+                }
+
 
                 return true;
             }
