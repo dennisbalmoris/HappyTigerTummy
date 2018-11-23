@@ -49,7 +49,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/passwordText"
+        android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/editTextEmail"
@@ -80,6 +80,15 @@
         android:text="Signup" />
 
 
+    <ProgressBar
+
+        android:id="@+id/progressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
 
 </RelativeLayout>
     <android.support.design.widget.NavigationView

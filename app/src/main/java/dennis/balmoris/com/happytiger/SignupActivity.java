@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import java.util.regex.Pattern;
 
@@ -80,8 +81,15 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(),"User Registered successfully",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
                 } else {
-                    Toast.makeText(getApplicationContext(),"An error occurred", Toast.LENGTH_LONG).show();
+                   if(task.getException() instanceof FirebaseAuthUserCollisionException){
+                       Toast.makeText(getApplicationContext(), "Email is already registered", Toast.LENGTH_LONG).show();
+                   }else{
+                       Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                   }
                 }
             }
         });
