@@ -37,6 +37,10 @@
         <activity android:name=".StreetfoodList" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".ProfileActivity" />
+
     </application>
 
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>
