@@ -1,85 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/dl">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".LoginActivity">
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
 
-
-        <TextView
-            android:id="@+id/textView2"
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="280dp"
-            android:text="Email" />
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/tiger" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
+        <!--  Name Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="128dp"
-            android:layout_marginEnd="283dp"
-            android:text="Password" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"></android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="wrap_content"
+        <!-- Email Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="43dp"
-            android:ems="10"
-            android:hint="email"
-            android:inputType="textEmailAddress" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
 
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Password Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/editTextEmail"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="107dp"
-            android:hint="password"
-            android:ems="10"
-            android:inputType="textPassword" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
 
-        <Button
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Signup Button -->
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btnSignup"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="186dp"
-            android:layout_marginEnd="127dp"
-            android:text="Sign Up" />
-
-        <Button
-            android:id="@+id/backToLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="316dp"
-            android:layout_marginEnd="110dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
             android:onClick="onClick"
-            android:text="Back to Login" />
+            android:padding="12dp"
+            android:text="Create Account" />
+
+        <TextView
+            android:id="@+id/backToLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Already a member? Login"
+            android:textSize="16dip" />
+
 
         <ProgressBar
 
@@ -91,16 +89,5 @@
             android:visibility="gone"
             />
 
-
-
-    </RelativeLayout>
-    <android.support.design.widget.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/navigation_header"
-        app:menu="@menu/navigation_menu"
-        >
-    </android.support.design.widget.NavigationView>
-</android.support.v4.widget.DrawerLayout>
+    </LinearLayout>
+</ScrollView>

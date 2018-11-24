@@ -64,7 +64,7 @@ public class ProfileActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
                 showImageChooser();
             }
         });
@@ -98,7 +98,6 @@ public class ProfileActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if(id == R.id.homePage)
-
                 {
                     startActivity(new Intent(ProfileActivity.this, ProfileActivity.class));
                     Toast.makeText(ProfileActivity.this, "My Profile", Toast.LENGTH_SHORT).show();
