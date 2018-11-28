@@ -17,6 +17,15 @@
 
     </item>
 
+
+    <item
+        android:id="@+id/messages"
+        android:title="Discuss Now"
+        android:icon="@drawable/ic_mail_black_24dp"
+        >
+
+    </item>
+
     <item
         android:id="@+id/settings"
         android:title="Settings"

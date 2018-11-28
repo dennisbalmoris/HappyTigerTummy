@@ -49,6 +49,11 @@ public class FoodStores extends AppCompatActivity {
                 {
                     Toast.makeText(FoodStores.this, "You are in this page", Toast.LENGTH_SHORT).show();
                 }
+                else if(id == R.id.messages)
+                {
+                    startActivity(new Intent(FoodStores.this, MessageActivity.class));
+                    Toast.makeText(FoodStores.this, "My Profile", Toast.LENGTH_SHORT).show();
+                }
 
                 else  if(id == R.id.settings)
                 {
