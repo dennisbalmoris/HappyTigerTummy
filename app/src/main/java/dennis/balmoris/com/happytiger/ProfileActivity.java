@@ -116,6 +116,7 @@ public class ProfileActivity extends AppCompatActivity {
 
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                final FirebaseUser user = mAuth.getCurrentUser();
                 int id = item.getItemId();
 
                 if(id == R.id.homePage)
@@ -137,9 +138,17 @@ public class ProfileActivity extends AppCompatActivity {
                 }
 
                 else if(id == R.id.messages) {
-                    finish();
-                    startActivity(new Intent(ProfileActivity.this, MessageActivity.class));
-                    Toast.makeText(ProfileActivity.this, "Discuss Now", Toast.LENGTH_SHORT).show();
+                    if(user != null){
+                        if(user.isEmailVerified()){
+                            finish();
+                            startActivity(new Intent(ProfileActivity.this, MessageActivity.class));
+                            Toast.makeText(ProfileActivity.this, "Discuss Now", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(ProfileActivity.this, "Verify Email First", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+
                 }
                 else if (id == R.id.signout)
 
@@ -179,7 +188,6 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void loadUserInformation() {
         final FirebaseUser user = mAuth.getCurrentUser();
-
 
         if (user != null) {
             if (user.getPhotoUrl() != null) {
