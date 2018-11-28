@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,9 +35,9 @@
         <activity android:name=".ShakesList" />
         <activity android:name=".RestaurantsList" />
         <activity android:name=".StreetfoodList" />
-        <activity android:name=".SignupActivity" />
+        <activity android:name=".SignupActivity" android:label="@string/Signup"/>
         <activity android:name=".ProfileActivity" />
-
+        <activity android:name=".PasswordActivity" android:label="@string/Reset" />
 
     </application>
 

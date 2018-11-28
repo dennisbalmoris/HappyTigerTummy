@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -39,31 +41,30 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void userLogin(){
+    private void userLogin() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        if(email.isEmpty()){
+        if (email.isEmpty()) {
             editTextEmail.setError("Email Address is Required");
             editTextEmail.requestFocus();
             return;
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextEmail.setError("Please enter a valid email");
             editTextEmail.requestFocus();
             return;
         }
 
 
-
-        if(password.isEmpty()){
+        if (password.isEmpty()) {
             editTextPassword.setError("Username is Required");
             editTextPassword.requestFocus();
             return;
         }
 
-        if(password.length() < 6){
+        if (password.length() < 6) {
             editTextPassword.setError("Minimum Length of password should be 6");
             editTextPassword.requestFocus();
             return;
@@ -76,36 +77,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     finish();
                     Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
 
-    public void onClickLogin(View view){
-       userLogin();
+    public void onClickLogin(View view) {
+        userLogin();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        if(mAuth.getCurrentUser() != null){
+        if (mAuth.getCurrentUser() != null) {
             finish();
             startActivity(new Intent(this, ProfileActivity.class));
         }
     }
 
-    public void onClickSignup(View view){
-                finish();
-                startActivity(new Intent(MainActivity.this, SignupActivity.class));
-        }
+    public void onClickSignup(View view) {
+        finish();
+        startActivity(new Intent(MainActivity.this, SignupActivity.class));
+    }
 
+    public void onClickReset(View view) {
+        finish();
+        startActivity(new Intent(MainActivity.this, PasswordActivity.class));
+    }
 
 }

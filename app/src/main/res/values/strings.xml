@@ -2,4 +2,9 @@
     <string name="app_name">Happy Tiger Tummy</string>
     <string name="Open">Happy Tiger Tummy</string>
     <string name="Close">Happy Tiger Tummy</string>
+    <string name="Signup">Signup Now!</string>
+    <string name="Reset">Reset Password</string>
+
+
+
 </resources>
