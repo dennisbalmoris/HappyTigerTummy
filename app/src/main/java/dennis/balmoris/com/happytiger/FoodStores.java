@@ -43,6 +43,7 @@ public class FoodStores extends AppCompatActivity {
                 if(id == R.id.homePage)
 
                 {
+                    finish();
                     startActivity(new Intent(FoodStores.this, ProfileActivity.class));
                     Toast.makeText(FoodStores.this, "My Profile", Toast.LENGTH_SHORT).show();
                 }
@@ -52,12 +53,14 @@ public class FoodStores extends AppCompatActivity {
                 }
                 else if(id == R.id.messages)
                 {
+                    finish();
                     startActivity(new Intent(FoodStores.this, MessageActivity.class));
                     Toast.makeText(FoodStores.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
                 else  if(id == R.id.settings)
                 {
+                    finish();
                     startActivity(new Intent(FoodStores.this, Settings.class));
                     Toast.makeText(FoodStores.this, "Settings", Toast.LENGTH_SHORT).show();
                 }

@@ -60,21 +60,24 @@ public class MessageActivity extends AppCompatActivity {
                 if(id == R.id.homePage)
 
                 {
+                    finish();
                     startActivity(new Intent(MessageActivity.this, ProfileActivity.class));
                     Toast.makeText(MessageActivity.this, "My Profile", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.foodStores)
                 {
-                    Toast.makeText(MessageActivity.this, "You are in this page", Toast.LENGTH_SHORT).show();
-                }
+                    finish();
+                    startActivity(new Intent(MessageActivity.this, FoodStores.class));
+                    Toast.makeText(MessageActivity.this, "Food Stores", Toast.LENGTH_SHORT).show();                }
                 else if(id == R.id.messages)
                 {
-                    startActivity(new Intent(MessageActivity.this, MessageActivity.class));
-                    Toast.makeText(MessageActivity.this, "Discuss Now", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MessageActivity.this, "You are in this page", Toast.LENGTH_SHORT).show();
+
                 }
 
                 else  if(id == R.id.settings)
                 {
+                    finish();
                     startActivity(new Intent(MessageActivity.this, Settings.class));
                     Toast.makeText(MessageActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                 }
@@ -128,8 +131,9 @@ public class MessageActivity extends AppCompatActivity {
                 messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getMessageTime()));
             }
         };
-
         listOfMessage.setAdapter(adapter);
+
+
 
     }
 

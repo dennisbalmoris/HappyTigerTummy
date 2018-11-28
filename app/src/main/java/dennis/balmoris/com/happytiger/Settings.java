@@ -2,6 +2,7 @@ package dennis.balmoris.com.happytiger;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Settings extends AppCompatActivity {
+    boolean doubleBackToExitPressedOnce = false;
     private DrawerLayout dl;
     private ActionBarDrawerToggle adbt;
 
@@ -40,11 +42,13 @@ public class Settings extends AppCompatActivity {
                 if(id == R.id.homePage)
 
                 {
+                    finish();
                     startActivity(new Intent(Settings.this, ProfileActivity.class));
                     Toast.makeText(Settings.this, "My Profile", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.foodStores)
                 {
+                    finish();
                     startActivity(new Intent(Settings.this, FoodStores.class));
                     Toast.makeText(Settings.this, "Food Stores", Toast.LENGTH_SHORT).show();
                 }
@@ -52,6 +56,7 @@ public class Settings extends AppCompatActivity {
                  else if(id == R.id.messages)
 
             {
+                finish();
                 startActivity(new Intent(Settings.this, MessageActivity.class));
                 Toast.makeText(Settings.this, "Discuss Now", Toast.LENGTH_SHORT).show();
             }
@@ -77,6 +82,24 @@ public class Settings extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return adbt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Tap Again to Exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 }
 
