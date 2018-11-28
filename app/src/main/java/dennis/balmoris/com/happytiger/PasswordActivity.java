@@ -2,6 +2,7 @@ package dennis.balmoris.com.happytiger;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class PasswordActivity extends AppCompatActivity {
+    boolean doubleBackToExitPressedOnce = false;
 
     private EditText passwordEmail;
     private Button resetPassword;
@@ -63,6 +65,25 @@ public class PasswordActivity extends AppCompatActivity {
     public void onClickBack(View view){
         finish();
         startActivity(new Intent(PasswordActivity.this, MainActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Tap Again to Exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 
 }

@@ -114,7 +114,12 @@ public class ProfileActivity extends AppCompatActivity {
                     Toast.makeText(ProfileActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.signout)
+                else if(id == R.id.messages) {
+                    startActivity(new Intent(ProfileActivity.this, MessageActivity.class));
+                    Toast.makeText(ProfileActivity.this, "Discuss Now", Toast.LENGTH_SHORT).show();
+                }
+                else if (id == R.id.signout)
+
                 {
                     FirebaseAuth.getInstance().signOut();
                     finish();

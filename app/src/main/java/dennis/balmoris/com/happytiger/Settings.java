@@ -49,7 +49,12 @@ public class Settings extends AppCompatActivity {
                     Toast.makeText(Settings.this, "Food Stores", Toast.LENGTH_SHORT).show();
                 }
 
+                 else if(id == R.id.messages)
 
+            {
+                startActivity(new Intent(Settings.this, MessageActivity.class));
+                Toast.makeText(Settings.this, "Discuss Now", Toast.LENGTH_SHORT).show();
+            }
                 else  if(id == R.id.settings)
                 {
                     Toast.makeText(Settings.this, "You are in this page", Toast.LENGTH_SHORT).show();

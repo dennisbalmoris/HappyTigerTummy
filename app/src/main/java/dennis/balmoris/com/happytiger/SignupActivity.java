@@ -2,6 +2,7 @@ package dennis.balmoris.com.happytiger;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ import java.util.regex.Pattern;
 import dennis.balmoris.com.happytiger.R;
 
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
+    boolean doubleBackToExitPressedOnce = false;
 
     ProgressBar progressBar;
     EditText editTextEmail, editTextPassword;
@@ -111,5 +113,24 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Tap Again to Exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 }

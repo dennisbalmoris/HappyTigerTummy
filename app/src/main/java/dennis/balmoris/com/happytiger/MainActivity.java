@@ -1,6 +1,7 @@
 package dennis.balmoris.com.happytiger;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -22,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean doubleBackToExitPressedOnce = false;
     FirebaseAuth mAuth;
     EditText editTextEmail, editTextPassword;
     ProgressBar progressBar;
@@ -111,6 +113,25 @@ public class MainActivity extends AppCompatActivity {
     public void onClickReset(View view) {
         finish();
         startActivity(new Intent(MainActivity.this, PasswordActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Tap Again to Exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 
 }

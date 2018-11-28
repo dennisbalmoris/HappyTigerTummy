@@ -1,6 +1,7 @@
 package dennis.balmoris.com.happytiger;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class FoodStores extends AppCompatActivity {
-
+    boolean doubleBackToExitPressedOnce = false;
     private DrawerLayout dl;
     private ActionBarDrawerToggle adbt;
 
@@ -52,7 +53,7 @@ public class FoodStores extends AppCompatActivity {
                 else if(id == R.id.messages)
                 {
                     startActivity(new Intent(FoodStores.this, MessageActivity.class));
-                    Toast.makeText(FoodStores.this, "My Profile", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FoodStores.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
                 else  if(id == R.id.settings)
@@ -102,6 +103,24 @@ public class FoodStores extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return adbt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Tap Again to Exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 }
 
