@@ -48,11 +48,7 @@ public class Settings extends AppCompatActivity {
                     startActivity(new Intent(Settings.this, FoodStores.class));
                     Toast.makeText(Settings.this, "Food Stores", Toast.LENGTH_SHORT).show();
                 }
-                else  if(id == R.id.favorites)
-                {
-                    startActivity(new Intent(Settings.this, Favorites.class));
-                    Toast.makeText(Settings.this, "Favorites", Toast.LENGTH_SHORT).show();
-                }
+
 
                 else  if(id == R.id.settings)
                 {

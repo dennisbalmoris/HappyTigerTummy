@@ -107,10 +107,6 @@ public class ProfileActivity extends AppCompatActivity {
                     startActivity(new Intent(ProfileActivity.this, FoodStores.class));
                     Toast.makeText(ProfileActivity.this, "Food Stores", Toast.LENGTH_SHORT).show();
                 }
-                else  if(id == R.id.favorites)
-                {
-                    Toast.makeText(ProfileActivity.this, "You are in this page", Toast.LENGTH_SHORT).show();
-                }
 
                 else  if(id == R.id.settings)
                 {

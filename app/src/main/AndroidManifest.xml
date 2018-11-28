@@ -26,17 +26,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FoodStores"   />
-        <activity android:name=".Favorites" />
-        <activity android:name=".Settings" />
-        <activity android:name=".PizzaList" />
-        <activity android:name=".ChickenList" />
+        <activity android:name=".FoodStores" android:label="@string/FoodEstablishments"  />
+        <activity android:name=".Settings" android:label="@string/Settings"/>
+        <activity android:name=".CoffeeList" />
+        <activity android:name=".FastFoodList" />
         <activity android:name=".CarinderiaList" />
         <activity android:name=".ShakesList" />
         <activity android:name=".RestaurantsList" />
         <activity android:name=".StreetfoodList" />
         <activity android:name=".SignupActivity" android:label="@string/Signup"/>
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ProfileActivity" android:label="@string/MyProfile"/>
         <activity android:name=".PasswordActivity" android:label="@string/Reset" />
 
     </application>

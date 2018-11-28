@@ -49,11 +49,6 @@ public class FoodStores extends AppCompatActivity {
                 {
                     Toast.makeText(FoodStores.this, "You are in this page", Toast.LENGTH_SHORT).show();
                 }
-                else  if(id == R.id.favorites)
-                {
-                    startActivity(new Intent(FoodStores.this, Favorites.class));
-                    Toast.makeText(FoodStores.this, "Favorites", Toast.LENGTH_SHORT).show();
-                }
 
                 else  if(id == R.id.settings)
                 {
@@ -76,11 +71,11 @@ public class FoodStores extends AppCompatActivity {
     }
 
     public void onClickPizza(View v){
-        startActivity(new Intent(FoodStores.this, PizzaList.class));
+        startActivity(new Intent(FoodStores.this, CoffeeList.class));
     }
 
     public void onClickChicken(View v){
-        startActivity(new Intent(FoodStores.this, ChickenList.class));
+        startActivity(new Intent(FoodStores.this, FastFoodList.class));
     }
 
     public void onClickCarinderia(View v){

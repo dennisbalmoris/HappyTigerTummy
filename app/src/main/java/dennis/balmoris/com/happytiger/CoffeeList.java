@@ -1,8 +1,6 @@
 package dennis.balmoris.com.happytiger;
 
-import android.media.Image;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class PizzaList extends AppCompatActivity {
+public class CoffeeList extends AppCompatActivity {
 
     ListView mListView;
 
@@ -32,12 +30,15 @@ public class PizzaList extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceStatete) {
         super.onCreate(savedInstanceStatete);
-        setContentView(R.layout.pizza_list);
+        setContentView(R.layout.coffee_list);
 
         mListView = findViewById(R.id.pizzaListView);
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
+
+
+
     }
 
     class CustomAdaptor extends BaseAdapter{
@@ -60,7 +61,7 @@ public class PizzaList extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            View view = getLayoutInflater().inflate(R.layout.pizza_custom, null);
+            View view = getLayoutInflater().inflate(R.layout.coffee_custom, null);
             ImageView mImageView = view.findViewById(R.id.pizzaImageView);
             TextView mTextView = (TextView) view.findViewById(R.id.pizzaTextView);
             mImageView.setImageResource(images[position]);

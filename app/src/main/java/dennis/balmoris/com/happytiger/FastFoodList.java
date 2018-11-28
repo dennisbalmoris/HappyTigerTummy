@@ -1,8 +1,6 @@
 package dennis.balmoris.com.happytiger;
 
-import android.media.Image;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ChickenList extends AppCompatActivity {
+public class FastFoodList extends AppCompatActivity {
 
     ListView mListView;
 
@@ -32,7 +30,7 @@ public class ChickenList extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceStatete) {
         super.onCreate(savedInstanceStatete);
-        setContentView(R.layout.chicken_list);
+        setContentView(R.layout.fastfood_list);
 
         mListView = findViewById(R.id.chickenListView);
 
@@ -60,7 +58,7 @@ public class ChickenList extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            View view = getLayoutInflater().inflate(R.layout.chicken_custom, null);
+            View view = getLayoutInflater().inflate(R.layout.fastfood_custom, null);
             ImageView mImageView = view.findViewById(R.id.chickenImageView);
             TextView mTextView = (TextView) view.findViewById(R.id.chickenTextView);
             mImageView.setImageResource(images[position]);
