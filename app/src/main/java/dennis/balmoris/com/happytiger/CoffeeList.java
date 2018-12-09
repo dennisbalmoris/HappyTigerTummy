@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -17,6 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import dennis.balmoris.com.happytiger.CoffeeStores.BosCoffee;
+import dennis.balmoris.com.happytiger.CoffeeStores.CafeKhivan;
+import dennis.balmoris.com.happytiger.CoffeeStores.IChill;
+import dennis.balmoris.com.happytiger.CoffeeStores.Seattles;
+import dennis.balmoris.com.happytiger.CoffeeStores.Starbucks;
 
 public class CoffeeList extends AppCompatActivity {
 
@@ -34,7 +41,7 @@ public class CoffeeList extends AppCompatActivity {
                     };
 
     String[] Names = {"Starbucks Coffee",
-                      "Bo's Coffee",
+                      "Bo's Coffee",    
                       "Seattle's Best Coffee",
                       "Cafe Khivan Coffee",
                       "iChill Theater Cafe"
@@ -47,10 +54,44 @@ public class CoffeeList extends AppCompatActivity {
 
         mListView = findViewById(R.id.pizzaListView);
 
-
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
 
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+            if(position==0){
+                Intent intent = new Intent(CoffeeList.this, Starbucks.class);
+                startActivity(intent);
+            }
+
+            if(position==1){
+                    Intent intent = new Intent(CoffeeList.this, BosCoffee.class);
+                    startActivity(intent);
+            }
+
+            if(position==2){
+                    Intent intent = new Intent(CoffeeList.this, Seattles.class);
+                    startActivity(intent);
+            }
+
+            if(position==3){
+                    Intent intent = new Intent(CoffeeList.this, CafeKhivan.class);
+                    startActivity(intent);
+            }
+
+            if(position==4){
+                    Intent intent = new Intent(CoffeeList.this, IChill.class);
+                    startActivity(intent);
+            }
+
+
+
+            }
+        });
 
         dl = (DrawerLayout) findViewById(R.id.dl);
         adbt = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
@@ -58,6 +99,8 @@ public class CoffeeList extends AppCompatActivity {
 
         dl.addDrawerListener(adbt);
         adbt.syncState();
+
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -129,4 +172,5 @@ public class CoffeeList extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         return adbt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
+
 }

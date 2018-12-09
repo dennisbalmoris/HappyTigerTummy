@@ -38,6 +38,13 @@
         <activity android:name=".ProfileActivity" android:label="@string/MyProfile" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".PasswordActivity" android:label="@string/Reset" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".MessageActivity" android:label="@string/Message" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".CoffeeStores.Starbucks" />
+        <activity android:name=".CoffeeStores.BosCoffee" />
+        <activity android:name=".CoffeeStores.CafeKhivan" />
+        <activity android:name=".CoffeeStores.IChill" />
+        <activity android:name=".CoffeeStores.Seattles" />
+x
+
 
 
 
