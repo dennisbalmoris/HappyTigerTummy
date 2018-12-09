@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -20,6 +21,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import dennis.balmoris.com.happytiger.Carinderia.Barcolli;
+import dennis.balmoris.com.happytiger.Carinderia.Cantunan;
+import dennis.balmoris.com.happytiger.Carinderia.Ilars;
+import dennis.balmoris.com.happytiger.Carinderia.Liempuhan;
+import dennis.balmoris.com.happytiger.Carinderia.MangTootz;
+import dennis.balmoris.com.happytiger.CoffeeStores.BosCoffee;
+import dennis.balmoris.com.happytiger.CoffeeStores.CafeKhivan;
+import dennis.balmoris.com.happytiger.CoffeeStores.IChill;
+import dennis.balmoris.com.happytiger.CoffeeStores.Seattles;
+import dennis.balmoris.com.happytiger.CoffeeStores.Starbucks;
 
 public class StreetfoodList extends AppCompatActivity {
 

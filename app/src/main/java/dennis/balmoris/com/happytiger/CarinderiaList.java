@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -20,6 +21,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import dennis.balmoris.com.happytiger.Carinderia.Barcolli;
+import dennis.balmoris.com.happytiger.Carinderia.Cantunan;
+import dennis.balmoris.com.happytiger.Carinderia.Ilars;
+import dennis.balmoris.com.happytiger.Carinderia.Liempuhan;
+import dennis.balmoris.com.happytiger.Carinderia.MangTootz;
 
 public class CarinderiaList extends AppCompatActivity {
 
@@ -55,6 +62,49 @@ public class CarinderiaList extends AppCompatActivity {
         adbt.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mListView = findViewById(R.id.carinderiaListView);
+
+        CustomAdaptor customAdaptor = new CustomAdaptor();
+        mListView.setAdapter(customAdaptor);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                if(position==0){
+                    Intent intent = new Intent(CarinderiaList.this, Barcolli.class);
+                    startActivity(intent);
+                }
+
+                if(position==1){
+                    Intent intent = new Intent(CarinderiaList.this, Ilars.class);
+                    startActivity(intent);
+                }
+
+                if(position==2){
+                    Intent intent = new Intent(CarinderiaList.this, Liempuhan.class);
+                    startActivity(intent);
+                }
+
+                if(position==3){
+                    Intent intent = new Intent(CarinderiaList.this, MangTootz.class);
+                    startActivity(intent);
+                }
+
+                if(position==4){
+                    Intent intent = new Intent(CarinderiaList.this, Cantunan.class);
+                    startActivity(intent);
+                }
+
+
+
+            }
+        });
 
         NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view);
 
@@ -100,10 +150,7 @@ public class CarinderiaList extends AppCompatActivity {
         });
 
 
-        mListView = findViewById(R.id.carinderiaListView);
 
-        CustomAdaptor customAdaptor = new CustomAdaptor();
-        mListView.setAdapter(customAdaptor);
     }
 
     class CustomAdaptor extends BaseAdapter{

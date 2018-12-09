@@ -43,7 +43,30 @@
         <activity android:name=".CoffeeStores.CafeKhivan" />
         <activity android:name=".CoffeeStores.IChill" />
         <activity android:name=".CoffeeStores.Seattles" />
-x
+        <activity android:name=".Carinderia.Cantunan" />
+        <activity android:name=".Carinderia.Barcolli" />
+        <activity android:name=".Carinderia.Ilars" />
+        <activity android:name=".Carinderia.Liempuhan" />
+        <activity android:name=".Carinderia.MangTootz" />
+        <activity android:name=".Drinks.Dakasi" />
+        <activity android:name=".Drinks.AmoYamie" />
+        <activity android:name=".Drinks.BonAppeTea" />
+        <activity android:name=".Drinks.Starrs" />
+        <activity android:name=".Drinks.Zagu" />
+        <activity android:name=".FastFood.Alejandros" />
+        <activity android:name=".FastFood.Jollibee" />
+        <activity android:name=".FastFood.MangInasal" />
+        <activity android:name=".FastFood.KFC" />
+        <activity android:name=".FastFood.Mcdo" />
+
+
+
+
+
+
+
+
+
 
 
 

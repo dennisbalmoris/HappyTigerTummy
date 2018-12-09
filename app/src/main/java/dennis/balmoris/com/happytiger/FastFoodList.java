@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -18,6 +19,16 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import dennis.balmoris.com.happytiger.Drinks.AmoYamie;
+import dennis.balmoris.com.happytiger.Drinks.BonAppeTea;
+import dennis.balmoris.com.happytiger.Drinks.Dakasi;
+import dennis.balmoris.com.happytiger.Drinks.Starrs;
+import dennis.balmoris.com.happytiger.Drinks.Zagu;
+import dennis.balmoris.com.happytiger.FastFood.Alejandros;
+import dennis.balmoris.com.happytiger.FastFood.Jollibee;
+import dennis.balmoris.com.happytiger.FastFood.KFC;
+import dennis.balmoris.com.happytiger.FastFood.MangInsal;
+import dennis.balmoris.com.happytiger.FastFood.Mcdo;
 
 
 public class FastFoodList extends AppCompatActivity {
@@ -42,6 +53,41 @@ public class FastFoodList extends AppCompatActivity {
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                if(position==0){
+                    Intent intent = new Intent(FastFoodList.this, KFC.class);
+                    startActivity(intent);
+                }
+
+                if(position==1){
+                    Intent intent = new Intent(FastFoodList.this, Mcdo.class);
+                    startActivity(intent);
+                }
+
+                if(position==2){
+                    Intent intent = new Intent(FastFoodList.this, Jollibee.class);
+                    startActivity(intent);
+                }
+
+                if(position==3){
+                    Intent intent = new Intent(FastFoodList.this, MangInsal.class);
+                    startActivity(intent);
+                }
+
+                if(position==4){
+                    Intent intent = new Intent(FastFoodList.this, Alejandros.class);
+                    startActivity(intent);
+                }
+
+
+
+            }
+        });
 
         dl = (DrawerLayout) findViewById(R.id.dl);
         adbt = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);

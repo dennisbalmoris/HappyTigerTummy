@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -20,6 +21,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import dennis.balmoris.com.happytiger.CoffeeStores.BosCoffee;
+import dennis.balmoris.com.happytiger.CoffeeStores.CafeKhivan;
+import dennis.balmoris.com.happytiger.CoffeeStores.IChill;
+import dennis.balmoris.com.happytiger.CoffeeStores.Seattles;
+import dennis.balmoris.com.happytiger.CoffeeStores.Starbucks;
+import dennis.balmoris.com.happytiger.Drinks.AmoYamie;
+import dennis.balmoris.com.happytiger.Drinks.BonAppeTea;
+import dennis.balmoris.com.happytiger.Drinks.Dakasi;
+import dennis.balmoris.com.happytiger.Drinks.Starrs;
+import dennis.balmoris.com.happytiger.Drinks.Zagu;
 
 public class ShakesList extends AppCompatActivity {
 
@@ -104,6 +116,41 @@ public class ShakesList extends AppCompatActivity {
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                if(position==0){
+                    Intent intent = new Intent(ShakesList.this, Zagu.class);
+                    startActivity(intent);
+                }
+
+                if(position==1){
+                    Intent intent = new Intent(ShakesList.this, Starrs.class);
+                    startActivity(intent);
+                }
+
+                if(position==2){
+                    Intent intent = new Intent(ShakesList.this, AmoYamie.class);
+                    startActivity(intent);
+                }
+
+                if(position==3){
+                    Intent intent = new Intent(ShakesList.this, BonAppeTea.class);
+                    startActivity(intent);
+                }
+
+                if(position==4){
+                    Intent intent = new Intent(ShakesList.this, Dakasi.class);
+                    startActivity(intent);
+                }
+
+
+
+            }
+        });
     }
 
     class CustomAdaptor extends BaseAdapter{
