@@ -28,46 +28,46 @@
         </activity>
         <activity android:name=".FoodStores" android:label="@string/FoodEstablishments"  />
         <activity android:name=".Settings" android:label="@string/Settings"/>
-        <activity android:name=".CoffeeList" />
-        <activity android:name=".FastFoodList" />
-        <activity android:name=".CarinderiaList" />
-        <activity android:name=".ShakesList" />
-        <activity android:name=".RestaurantsList" />
-        <activity android:name=".StreetfoodList" />
+        <activity android:name=".CoffeeList" android:label="@string/coffee"/>
+        <activity android:name=".FastFoodList" android:label="@string/fastfood"/>
+        <activity android:name=".CarinderiaList" android:label="@string/carinderia" />
+        <activity android:name=".ShakesList" android:label="@string/drinks"/>
+        <activity android:name=".RestaurantsList" android:label="@string/resto"/>
+        <activity android:name=".StreetfoodList" android:label="@string/street"/>
         <activity android:name=".SignupActivity" android:label="@string/Signup" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".ProfileActivity" android:label="@string/MyProfile" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".PasswordActivity" android:label="@string/Reset" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".MessageActivity" android:label="@string/Message" android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".CoffeeStores.Starbucks" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".CoffeeStores.BosCoffee" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".CoffeeStores.CafeKhivan" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".CoffeeStores.IChill" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".CoffeeStores.Seattles" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Carinderia.Cantunan" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Carinderia.Barcolli" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Carinderia.Ilars" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Carinderia.Liempuhan" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Carinderia.MangTootz" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Drinks.Dakasi" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Drinks.AmoYamie" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Drinks.BonAppeTea" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Drinks.Starrs" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Drinks.Zagu" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".FastFood.Alejandros" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".FastFood.Jollibee" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".FastFood.MangInsal" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".FastFood.KFC" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".FastFood.Mcdo" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Restaurant.ArmyNavy" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Restaurant.Ichiro" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Restaurant.Pancake" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Restaurant.Sbarro" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Restaurant.Shakeys" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".StreetFoods.HepaLane" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".StreetFoods.EspanaGate1" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".StreetFoods.Asturias" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".StreetFoods.Antonio" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".StreetFoods.PCampa" android:label="@string/FoodEstablishments"  />
+        <activity android:name=".CoffeeStores.Starbucks" android:label="@string/coffee"/>
+        <activity android:name=".CoffeeStores.BosCoffee" android:label="@string/coffee"/>
+        <activity android:name=".CoffeeStores.CafeKhivan" android:label="@string/coffee"/>
+        <activity android:name=".CoffeeStores.IChill" android:label="@string/coffee"/>
+        <activity android:name=".CoffeeStores.Seattles" android:label="@string/coffee"/>
+        <activity android:name=".Carinderia.Cantunan" android:label="@string/carinderia" />
+        <activity android:name=".Carinderia.Barcolli" android:label="@string/carinderia" />
+        <activity android:name=".Carinderia.Ilars" android:label="@string/carinderia" />
+        <activity android:name=".Carinderia.Liempuhan" android:label="@string/carinderia" />
+        <activity android:name=".Carinderia.MangTootz" android:label="@string/carinderia" />
+        <activity android:name=".Drinks.Dakasi" android:label="@string/drinks"/>
+        <activity android:name=".Drinks.AmoYamie" android:label="@string/drinks"/>
+        <activity android:name=".Drinks.BonAppeTea" android:label="@string/drinks"/>
+        <activity android:name=".Drinks.Starrs" android:label="@string/drinks"/>
+        <activity android:name=".Drinks.Zagu" android:label="@string/drinks"/>
+        <activity android:name=".FastFood.Alejandros" android:label="@string/fastfood"/>
+        <activity android:name=".FastFood.Jollibee" android:label="@string/fastfood"/>
+        <activity android:name=".FastFood.MangInsal" android:label="@string/fastfood"/>
+        <activity android:name=".FastFood.KFC" android:label="@string/fastfood"/>
+        <activity android:name=".FastFood.Mcdo" android:label="@string/fastfood"/>
+        <activity android:name=".Restaurant.ArmyNavy" android:label="@string/resto"/>
+        <activity android:name=".Restaurant.Ichiro" android:label="@string/resto"/>
+        <activity android:name=".Restaurant.Pancake" android:label="@string/resto"/>
+        <activity android:name=".Restaurant.Sbarro" android:label="@string/resto"/>
+        <activity android:name=".Restaurant.Shakeys" android:label="@string/resto"/>
+        <activity android:name=".StreetFoods.HepaLane" android:label="@string/street"/>
+        <activity android:name=".StreetFoods.EspanaGate1" android:label="@string/street"/>
+        <activity android:name=".StreetFoods.Asturias" android:label="@string/street"/>
+        <activity android:name=".StreetFoods.Antonio" android:label="@string/street"/>
+        <activity android:name=".StreetFoods.PCampa" android:label="@string/street"/>
 
 
 

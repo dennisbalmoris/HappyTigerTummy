@@ -20,7 +20,6 @@
         tools:context=".FoodStores">
 
         <android.support.v7.widget.CardView
-            app:cardBackgroundColor=" #ffff99"
 
             android:layout_width="362dp"
             android:layout_height="wrap_content"
