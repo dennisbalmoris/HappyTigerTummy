@@ -130,12 +130,7 @@ public class ProfileActivity extends AppCompatActivity {
                     Toast.makeText(ProfileActivity.this, "Food Stores", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    finish();
-                    startActivity(new Intent(ProfileActivity.this, Settings.class));
-                    Toast.makeText(ProfileActivity.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
+
 
                 else if(id == R.id.messages) {
                     if(user != null){

@@ -75,13 +75,6 @@ public class MessageActivity extends AppCompatActivity {
 
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    finish();
-                    startActivity(new Intent(MessageActivity.this, Settings.class));
-                    Toast.makeText(MessageActivity.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
-
                 else  if(id == R.id.signout)
                 {
                     FirebaseAuth.getInstance().signOut();

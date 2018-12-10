@@ -1,8 +1,6 @@
 package dennis.balmoris.com.happytiger.Restaurant;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,7 +9,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +20,6 @@ import dennis.balmoris.com.happytiger.MainActivity;
 import dennis.balmoris.com.happytiger.MessageActivity;
 import dennis.balmoris.com.happytiger.ProfileActivity;
 import dennis.balmoris.com.happytiger.R;
-import dennis.balmoris.com.happytiger.Settings;
 
 public class Sbarro extends AppCompatActivity {
 
@@ -86,11 +82,6 @@ public class Sbarro extends AppCompatActivity {
                     Toast.makeText(Sbarro.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    startActivity(new Intent(Sbarro.this, Settings.class));
-                    Toast.makeText(Sbarro.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
 
                 else  if(id == R.id.signout)
                 {

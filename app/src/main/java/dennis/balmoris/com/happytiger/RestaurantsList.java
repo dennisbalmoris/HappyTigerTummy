@@ -93,11 +93,7 @@ public class RestaurantsList extends AppCompatActivity {
                     Toast.makeText(RestaurantsList.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    startActivity(new Intent(RestaurantsList.this, Settings.class));
-                    Toast.makeText(RestaurantsList.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
+
 
                 else  if(id == R.id.signout)
                 {

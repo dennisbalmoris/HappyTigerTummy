@@ -123,8 +123,6 @@ public class CoffeeList extends AppCompatActivity {
                 } else if(id == R.id.messages){
                     startActivity(new Intent(CoffeeList.this, MessageActivity.class));
                     Toast.makeText(CoffeeList.this, "Discuss Now", Toast.LENGTH_SHORT).show();
-                } else if (id == R.id.settings) {
-                    Toast.makeText(CoffeeList.this, "You are in this page", Toast.LENGTH_SHORT).show();
                 } else if (id == R.id.signout) {
                     FirebaseAuth.getInstance().signOut();
                     finish();

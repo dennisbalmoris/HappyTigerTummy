@@ -102,11 +102,7 @@ public class StreetfoodList extends AppCompatActivity {
                     Toast.makeText(StreetfoodList.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    startActivity(new Intent(StreetfoodList.this, Settings.class));
-                    Toast.makeText(StreetfoodList.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
+
 
                 else  if(id == R.id.signout)
                 {

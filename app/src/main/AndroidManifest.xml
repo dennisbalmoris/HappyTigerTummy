@@ -27,7 +27,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".FoodStores" android:label="@string/FoodEstablishments"  />
-        <activity android:name=".Settings" android:label="@string/Settings"/>
         <activity android:name=".CoffeeList" android:label="@string/coffee"/>
         <activity android:name=".FastFoodList" android:label="@string/fastfood"/>
         <activity android:name=".CarinderiaList" android:label="@string/carinderia" />

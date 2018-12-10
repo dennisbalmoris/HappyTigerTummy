@@ -20,7 +20,6 @@ import dennis.balmoris.com.happytiger.MainActivity;
 import dennis.balmoris.com.happytiger.MessageActivity;
 import dennis.balmoris.com.happytiger.ProfileActivity;
 import dennis.balmoris.com.happytiger.R;
-import dennis.balmoris.com.happytiger.Settings;
 
 public class IChill extends AppCompatActivity {
 
@@ -84,11 +83,6 @@ public class IChill extends AppCompatActivity {
                     Toast.makeText(IChill.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    startActivity(new Intent(IChill.this, Settings.class));
-                    Toast.makeText(IChill.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
 
                 else  if(id == R.id.signout)
                 {

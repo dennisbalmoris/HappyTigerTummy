@@ -27,14 +27,6 @@
     </item>
 
     <item
-        android:id="@+id/settings"
-        android:title="Settings"
-        android:icon="@drawable/ic_settings_black_24dp"
-        >
-
-    </item>
-
-    <item
         android:id="@+id/signout"
         android:title="Signout"
         android:icon="@drawable/ic_close_black_24dp"

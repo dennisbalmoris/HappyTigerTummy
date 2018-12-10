@@ -93,11 +93,7 @@ public class ShakesList extends AppCompatActivity {
                     Toast.makeText(ShakesList.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    startActivity(new Intent(ShakesList.this, Settings.class));
-                    Toast.makeText(ShakesList.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
+
 
                 else  if(id == R.id.signout)
                 {

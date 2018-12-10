@@ -20,7 +20,6 @@ import dennis.balmoris.com.happytiger.MainActivity;
 import dennis.balmoris.com.happytiger.MessageActivity;
 import dennis.balmoris.com.happytiger.ProfileActivity;
 import dennis.balmoris.com.happytiger.R;
-import dennis.balmoris.com.happytiger.Settings;
 
 public class Starbucks extends AppCompatActivity {
 
@@ -84,11 +83,7 @@ public class Starbucks extends AppCompatActivity {
                     Toast.makeText(Starbucks.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    startActivity(new Intent(Starbucks.this, Settings.class));
-                    Toast.makeText(Starbucks.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
+
 
                 else  if(id == R.id.signout)
                 {

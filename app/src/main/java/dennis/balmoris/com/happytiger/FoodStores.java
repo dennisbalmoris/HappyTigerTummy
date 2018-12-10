@@ -58,12 +58,7 @@ public class FoodStores extends AppCompatActivity {
                     Toast.makeText(FoodStores.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    finish();
-                    startActivity(new Intent(FoodStores.this, Settings.class));
-                    Toast.makeText(FoodStores.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
+
 
                 else  if(id == R.id.signout)
                 {

@@ -130,11 +130,7 @@ public class CarinderiaList extends AppCompatActivity {
                     Toast.makeText(CarinderiaList.this, "Discuss Now", Toast.LENGTH_SHORT).show();
                 }
 
-                else  if(id == R.id.settings)
-                {
-                    startActivity(new Intent(CarinderiaList.this, Settings.class));
-                    Toast.makeText(CarinderiaList.this, "Settings", Toast.LENGTH_SHORT).show();
-                }
+
 
                 else  if(id == R.id.signout)
                 {
