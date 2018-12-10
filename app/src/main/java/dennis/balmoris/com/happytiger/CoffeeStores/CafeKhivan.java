@@ -42,7 +42,7 @@ public class CafeKhivan extends AppCompatActivity {
 
                 intent = new Intent(android.content.Intent.ACTION_VIEW);
                 //intent.setData(Uri.parse("geo:14.610644, 120.986921"));
-                intent.setData(Uri.parse("geo:14.610644,120.986921?q=14.610644,120.986921(Starbucks Dapitan)"));
+                intent.setData(Uri.parse("geo: 14.608374, 120.987764 ?q= 14.608374, 120.987764 (Cafe Khivan)"));
 
                 chooser=Intent.createChooser(intent,"Launch Maps");
                 startActivity(intent);

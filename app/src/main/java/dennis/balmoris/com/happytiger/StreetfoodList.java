@@ -32,6 +32,16 @@ import dennis.balmoris.com.happytiger.CoffeeStores.CafeKhivan;
 import dennis.balmoris.com.happytiger.CoffeeStores.IChill;
 import dennis.balmoris.com.happytiger.CoffeeStores.Seattles;
 import dennis.balmoris.com.happytiger.CoffeeStores.Starbucks;
+import dennis.balmoris.com.happytiger.Restaurant.ArmyNavy;
+import dennis.balmoris.com.happytiger.Restaurant.Ichiro;
+import dennis.balmoris.com.happytiger.Restaurant.Pancake;
+import dennis.balmoris.com.happytiger.Restaurant.Sbarro;
+import dennis.balmoris.com.happytiger.Restaurant.Shakeys;
+import dennis.balmoris.com.happytiger.StreetFoods.Antonio;
+import dennis.balmoris.com.happytiger.StreetFoods.Asturias;
+import dennis.balmoris.com.happytiger.StreetFoods.EspanaGate1;
+import dennis.balmoris.com.happytiger.StreetFoods.HepaLane;
+import dennis.balmoris.com.happytiger.StreetFoods.PCampa;
 
 public class StreetfoodList extends AppCompatActivity {
 
@@ -47,11 +57,11 @@ public class StreetfoodList extends AppCompatActivity {
             R.drawable.anton,
     };
 
-    String[] Names = {"Espana Gate 1",
-            "Asturias St.",
-            "P. Campa St.",
-            "Hepa Lane",
-            "Antonio St."
+    String[] Names = {"Espana Street",
+            "Asturias Street.",
+            "Padre Campa Street.",
+            "Padre Noval Street",
+            "Antonio Street."
     };
 
     @Override
@@ -117,6 +127,41 @@ public class StreetfoodList extends AppCompatActivity {
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                if(position==0){
+                    Intent intent = new Intent(StreetfoodList.this, EspanaGate1.class);
+                    startActivity(intent);
+                }
+
+                if(position==1){
+                    Intent intent = new Intent(StreetfoodList.this, Asturias.class);
+                    startActivity(intent);
+                }
+
+                if(position==2){
+                    Intent intent = new Intent(StreetfoodList.this, PCampa.class);
+                    startActivity(intent);
+                }
+
+                if(position==3){
+                    Intent intent = new Intent(StreetfoodList.this, HepaLane.class);
+                    startActivity(intent);
+                }
+
+                if(position==4){
+                    Intent intent = new Intent(StreetfoodList.this, Antonio.class);
+                    startActivity(intent);
+                }
+
+
+
+            }
+        });
     }
 
     class CustomAdaptor extends BaseAdapter{

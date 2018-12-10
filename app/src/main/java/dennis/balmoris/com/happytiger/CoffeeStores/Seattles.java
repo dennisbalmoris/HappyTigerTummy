@@ -42,7 +42,7 @@ public class Seattles extends AppCompatActivity {
 
                 intent = new Intent(android.content.Intent.ACTION_VIEW);
                 //intent.setData(Uri.parse("geo:14.610644, 120.986921"));
-                intent.setData(Uri.parse("geo:14.610644,120.986921?q=14.610644,120.986921(Starbucks Dapitan)"));
+                intent.setData(Uri.parse("geo: 14.609558, 120.991609 ?q= 14.609558, 120.991609 (Seattle's Best Coffee)"));
 
                 chooser=Intent.createChooser(intent,"Launch Maps");
                 startActivity(intent);

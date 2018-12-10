@@ -126,7 +126,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Pacific Suites, Dapitan St, Sampaloc, Manila, 1008 Metro Manila"
+                    android:text="UST Car Park, Leon Ma. Guerrero Drive, Sampaloc, Manila, 1008 Metro Manila"
                     android:textAlignment="center"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"

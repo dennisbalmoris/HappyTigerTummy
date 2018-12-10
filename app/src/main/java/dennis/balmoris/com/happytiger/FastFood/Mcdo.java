@@ -44,8 +44,7 @@ public class Mcdo extends AppCompatActivity {
 
                 intent = new Intent(android.content.Intent.ACTION_VIEW);
 
-                intent.setData(Uri.parse("geo:14.612406,120.990257?q=14.612406,120.990257(Bo's Coffee)"));
-
+                intent.setData(Uri.parse("geo:  14.610654, 120.990660  ?q=  14.610654, 120.990660 (Mcdonald's)"));
                 chooser=Intent.createChooser(intent,"Launch Maps");
                 startActivity(intent);
             }

@@ -44,7 +44,7 @@ public class Liempuhan extends AppCompatActivity {
 
                 intent = new Intent(android.content.Intent.ACTION_VIEW);
 
-                intent.setData(Uri.parse("geo:14.612406,120.990257?q=14.612406,120.990257(Bo's Coffee)"));
+                intent.setData(Uri.parse("geo: 14.612516, 120.987515 ?q= 14.612516, 120.987515 (Liempuhan)"));
 
                 chooser=Intent.createChooser(intent,"Launch Maps");
                 startActivity(intent);

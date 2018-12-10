@@ -19,26 +19,42 @@
         android:weightSum="10"
         tools:context=".FoodStores">
 
-        <RelativeLayout
-            android:layout_weight="2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
+        <android.support.v7.widget.CardView
+            app:cardBackgroundColor=" #ffff99"
 
-            <TextView
-                android:id="@+id/textGrid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="CHOOSE"
-                android:textSize="26sp"
-                android:visibility="visible" />
+            android:layout_width="362dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true">
 
-        </RelativeLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="370dp"
+                android:layout_height="82dp">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="185dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="CATEGORIES"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.GridLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="359dp"
             android:layout_weight="8"
             android:padding="14dp"
             app:alignmentMode="alignMargins"
@@ -47,6 +63,7 @@
             app:rowCount="3">
 
             <android.support.v7.widget.CardView
+
                 android:layout_width="137dp"
                 android:layout_height="105dp"
 
@@ -63,16 +80,15 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="16dp"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    >
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="84dp"
+                        android:layout_height="52dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/pot" />
+                        android:src="@drawable/carinderiaz" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -105,25 +121,24 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="16dp"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    >
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="85dp"
+                        android:layout_height="51dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/shake" />
+                        android:src="@drawable/drinkz" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Drinks"
+                        android:textAlignment="center"
                         android:textSize="18sp"
-                        android:textStyle="bold"
 
-                        />
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -152,10 +167,10 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/chicken" />
+                        android:src="@drawable/fastfooodz" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -188,16 +203,15 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="16dp"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    >
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="86dp"
+                        android:layout_height="52dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/bbq" />
+                        android:src="@drawable/streetz" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -230,16 +244,15 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="16dp"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    >
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="88dp"
+                        android:layout_height="52dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/wine" />
+                        android:src="@drawable/resto" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -277,10 +290,10 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/coffee" />
+                        android:src="@drawable/coffeecup" />
 
                     <TextView
                         android:layout_width="wrap_content"

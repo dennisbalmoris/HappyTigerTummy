@@ -42,7 +42,7 @@ public class CarinderiaList extends AppCompatActivity {
             R.drawable.cantunan
     };
 
-    String[] Names = {"Barcolli",
+    String[] Names = {"Barcollie",
             "Ilars",
             "Liempuhan",
             "Mang Tootz",

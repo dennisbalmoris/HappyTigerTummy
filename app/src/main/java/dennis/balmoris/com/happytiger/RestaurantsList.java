@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -21,6 +22,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import dennis.balmoris.com.happytiger.Drinks.AmoYamie;
+import dennis.balmoris.com.happytiger.Drinks.BonAppeTea;
+import dennis.balmoris.com.happytiger.Drinks.Dakasi;
+import dennis.balmoris.com.happytiger.Drinks.Starrs;
+import dennis.balmoris.com.happytiger.Drinks.Zagu;
+import dennis.balmoris.com.happytiger.Restaurant.ArmyNavy;
+import dennis.balmoris.com.happytiger.Restaurant.Ichiro;
+import dennis.balmoris.com.happytiger.Restaurant.Pancake;
+import dennis.balmoris.com.happytiger.Restaurant.Sbarro;
+import dennis.balmoris.com.happytiger.Restaurant.Shakeys;
 
 public class RestaurantsList extends AppCompatActivity {
 
@@ -105,6 +117,42 @@ public class RestaurantsList extends AppCompatActivity {
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         mListView.setAdapter(customAdaptor);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                if(position==0){
+                    Intent intent = new Intent(RestaurantsList.this, Shakeys.class);
+                    startActivity(intent);
+                }
+
+                if(position==1){
+                    Intent intent = new Intent(RestaurantsList.this, Pancake.class);
+                    startActivity(intent);
+                }
+
+                if(position==2){
+                    Intent intent = new Intent(RestaurantsList.this, ArmyNavy.class);
+                    startActivity(intent);
+                }
+
+                if(position==3){
+                    Intent intent = new Intent(RestaurantsList.this, Sbarro.class);
+                    startActivity(intent);
+                }
+
+                if(position==4){
+                    Intent intent = new Intent(RestaurantsList.this, Ichiro.class);
+                    startActivity(intent);
+                }
+
+
+
+            }
+        });
+
     }
 
     class CustomAdaptor extends BaseAdapter{

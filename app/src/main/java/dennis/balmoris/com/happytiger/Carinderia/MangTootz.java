@@ -44,7 +44,7 @@ public class MangTootz extends AppCompatActivity {
 
                 intent = new Intent(android.content.Intent.ACTION_VIEW);
 
-                intent.setData(Uri.parse("geo:14.612406,120.990257?q=14.612406,120.990257(Bo's Coffee)"));
+                intent.setData(Uri.parse("geo: 14.609202, 120.986977 ?q= 14.609202, 120.986977 (Mang Tootz)"));
 
                 chooser=Intent.createChooser(intent,"Launch Maps");
                 startActivity(intent);

@@ -44,7 +44,7 @@ public class MangInsal extends AppCompatActivity {
 
                 intent = new Intent(android.content.Intent.ACTION_VIEW);
 
-                intent.setData(Uri.parse("geo:14.612406,120.990257?q=14.612406,120.990257(Bo's Coffee)"));
+                intent.setData(Uri.parse("geo: 14.612590, 120.989133 ?q= 14.612590, 120.989133 (Mang Inasal)"));
 
                 chooser=Intent.createChooser(intent,"Launch Maps");
                 startActivity(intent);
