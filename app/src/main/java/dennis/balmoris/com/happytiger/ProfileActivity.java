@@ -125,6 +125,7 @@ public class ProfileActivity extends AppCompatActivity {
                 }
                 else if(id == R.id.foodStores)
                 {
+                    
                     finish();
                     startActivity(new Intent(ProfileActivity.this, FoodStores.class));
                     Toast.makeText(ProfileActivity.this, "Food Stores", Toast.LENGTH_SHORT).show();

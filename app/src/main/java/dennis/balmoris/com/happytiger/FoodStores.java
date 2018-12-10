@@ -13,11 +13,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class FoodStores extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
     private DrawerLayout dl;
     private ActionBarDrawerToggle adbt;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,9 @@ public class FoodStores extends AppCompatActivity {
         dl = (DrawerLayout)findViewById(R.id.dl);
         adbt = new ActionBarDrawerToggle(this, dl, R.string.Open,R.string.Close);
         adbt.setDrawerIndicatorEnabled(true);
+        mAuth = FirebaseAuth.getInstance();
+
+
 
         dl.addDrawerListener(adbt);
         adbt.syncState();
@@ -38,7 +43,9 @@ public class FoodStores extends AppCompatActivity {
 
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                FirebaseUser user = mAuth.getCurrentUser();
                 int id = item.getItemId();
+
 
                 if(id == R.id.homePage)
 
@@ -53,9 +60,15 @@ public class FoodStores extends AppCompatActivity {
                 }
                 else if(id == R.id.messages)
                 {
-                    finish();
-                    startActivity(new Intent(FoodStores.this, MessageActivity.class));
-                    Toast.makeText(FoodStores.this, "Discuss Now", Toast.LENGTH_SHORT).show();
+                    if(user != null){
+                        if(user.isEmailVerified()){
+                            finish();
+                            startActivity(new Intent(FoodStores.this, MessageActivity.class));
+                            Toast.makeText(FoodStores.this, "Discuss Now", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(FoodStores.this, "Verify Email First", Toast.LENGTH_SHORT).show();
+                        }
+                    }
                 }
 
 
